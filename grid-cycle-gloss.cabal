@@ -19,12 +19,10 @@ copyright: Karl Ostmo 2024
 category:           Game
 build-type:         Simple
 extra-doc-files:    CHANGELOG.md
--- extra-source-files:
 extra-doc-files: image/screenshot.png
 
 common warnings
     ghc-options: -Wall
-
 
 library
     import:           warnings

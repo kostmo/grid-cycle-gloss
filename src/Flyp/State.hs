@@ -19,7 +19,7 @@ data Slot
 
 data InteractionState = InteractionState
     { toggleCount :: Int
-    , lastClickCoords :: (Int, Int)
+    , highlightCoords :: (Int, Int)
     }
 
 data MyWorld = MyWorld

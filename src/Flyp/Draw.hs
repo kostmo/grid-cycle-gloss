@@ -25,7 +25,7 @@ drawTile iState colIdx rowIdx s =
             [Color c $ rectangleSolid 1 1]
 
     shadow =
-        Color (withAlpha 0.2 $ black) $
+        Color (withAlpha 0.2 black) $
             rotate (-30) $
                 scale 1.5 1 $
                     circleSolid 0.6
