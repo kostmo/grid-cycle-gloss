@@ -1,0 +1,57 @@
+cabal-version:      3.4
+name:               grid-cycle-gloss
+version:            0.1.0.0
+synopsis:
+  Minimal scaffold for a grid-based game in Gloss
+description:
+  Configurable grid size supporting mouse
+  and keyboard navigation within the grid.
+
+  Click or press spacebar to cycle the state of a tile.
+
+  <<image/screenshot.png>>
+
+license:            BSD-3-Clause
+license-file:       LICENSE
+author:             Karl Ostmo
+maintainer:         kostmo@gmail.com
+copyright: Karl Ostmo 2024
+category:           Game
+build-type:         Simple
+extra-doc-files:    CHANGELOG.md
+-- extra-source-files:
+extra-doc-files: image/screenshot.png
+
+common warnings
+    ghc-options: -Wall
+
+
+library
+    import:           warnings
+    exposed-modules:
+        Flyp
+        Flyp.Draw
+        Flyp.Event
+        Flyp.State
+        Flyp.Util
+    build-depends:
+        base ^>=4.18.2.0,
+        extra,
+        gloss,
+        vector,
+    hs-source-dirs:   src
+    default-language: Haskell2010
+
+executable grid-game
+    import:           warnings
+    main-is:          Main.hs
+    build-depends:
+        base ^>=4.18.2.0,
+        extra,
+        gloss,
+        vector,
+    build-depends:
+        grid-cycle-gloss,
+                    
+    hs-source-dirs:   app
+    default-language: Haskell2010
