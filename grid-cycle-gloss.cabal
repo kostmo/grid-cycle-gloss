@@ -4,6 +4,8 @@ version:            0.1.0.0
 synopsis:
   Minimal scaffold for a grid-based game in Gloss
 description:
+  Demo of a fidget-popper-like game.
+
   Configurable grid size supporting mouse
   and keyboard navigation within the grid.
 

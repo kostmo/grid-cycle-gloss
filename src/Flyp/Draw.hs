@@ -34,6 +34,7 @@ drawTile iState colIdx rowIdx s =
         Green -> green
         Yellow -> yellow
         Red -> red
+        Purple -> violet
 
 drawDimension ::
     Bool ->

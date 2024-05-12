@@ -15,6 +15,7 @@ data Slot
     = Green
     | Yellow
     | Red
+    | Purple
     deriving (Eq, Enum, Bounded)
 
 data InteractionState = InteractionState
@@ -31,6 +32,6 @@ initState :: MyWorld
 initState =
     MyWorld iState $
         V.replicate (boardHeight boardSize) $
-            V.replicate (boardWidth boardSize) Red
+            V.replicate (boardWidth boardSize) minBound
   where
     iState = InteractionState 0 (0, 0)
